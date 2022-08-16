@@ -45,7 +45,6 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-
             Scanner scanner = new Scanner(System.in);
             System.out.print("Please enter your user name for the chat : " );
             userName = scanner.nextLine();
