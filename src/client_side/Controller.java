@@ -40,14 +40,14 @@ public class Controller implements Initializable {
 
     private Client client;
 
-    private String userName;
+    public static String userName;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            Scanner scanner = new Scanner(System.in);
+            /*Scanner scanner = new Scanner(System.in);
             System.out.print("Please enter your user name for the chat : " );
-            userName = scanner.nextLine();
+            userName = scanner.nextLine();*/
             client = new Client(new Socket("localhost",1234),userName);
             client.sendMessageToServer(userName);
         }catch (IOException e ){
